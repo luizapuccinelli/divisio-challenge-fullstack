@@ -24,9 +24,6 @@ export const PokemonContent = styled.div`
     font-size: 20px;
     color: black;
     font-weight: bold;
-    & + p {
-      margin-left: 20px;
-    }
   }
 
   span {
