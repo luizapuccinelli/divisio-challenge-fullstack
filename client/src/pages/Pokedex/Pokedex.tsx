@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { useQuery } from '@apollo/client'
 import { getPokemons } from '../../gql/getPokemons'
-import { Pokemon } from 'components/Pokemon/Pokemon'
-import { PokemonList } from './styles'
 import { PokemonType } from './types'
+import { Pokemons } from 'components/Pokemons/Pokemons'
 
 const Pokedex = () => {
   const [pokemonList, setPokemonList] = useState<PokemonType[]>([])
@@ -19,13 +18,7 @@ const Pokedex = () => {
     }
   }, [loading, pokemons])
 
-  return (
-    <PokemonList>
-      {pokemonList.map((pokemon) => {
-        return <Pokemon key={pokemon.id} pokemon={pokemon} />
-      })}
-    </PokemonList>
-  )
+  return <Pokemons pokemons={pokemons} load={loading} />
 }
 
 export default Pokedex
