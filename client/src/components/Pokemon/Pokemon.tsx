@@ -1,6 +1,11 @@
 import React from 'react'
-import { Type } from './PokemonTypes/Type'
-import { PokemonContainer, PokemonContent } from './styles'
+import { Type } from '../PokemonTypes/Type'
+import {
+  PokemonContainer,
+  PokemonContent,
+  PokemonType,
+  PokemonImage
+} from './styles'
 import { PokemonProps } from './types'
 
 export function Pokemon(props: PokemonProps) {
@@ -8,13 +13,13 @@ export function Pokemon(props: PokemonProps) {
     <PokemonContainer>
       <PokemonContent>
         <h1>{props.pokemon.name}</h1>
-        <p>#{props.pokemon.number}</p>
-        <div>
+        <p>Nº {props.pokemon.number}</p>
+        <PokemonType>
           {props.pokemon.types.map((type) => {
             return <Type key={type} type={type} />
           })}
-        </div>
-        <img src={props.pokemon.image} alt={props.pokemon.name} />
+        </PokemonType>
+        <PokemonImage image={props.pokemon.image} />
       </PokemonContent>
     </PokemonContainer>
   )
