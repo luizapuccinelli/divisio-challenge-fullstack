@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 export const HomeBackground = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100vw;
@@ -15,10 +15,13 @@ export const HomeBackground = styled.div`
     justify-content: center;
     align-items: center;
   }
+  h1 {
+    text-align: center;
+  }
 `
 export const Button = styled(Link)`
   color: #ffff;
-  background-color: #dc0a2d;
+  background-color: #e74a39;
   display: flex;
   justify-content: center;
   align-items: center;
