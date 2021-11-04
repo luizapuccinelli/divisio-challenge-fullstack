@@ -5,8 +5,8 @@ export const NavBarBg = styled.div`
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 15vh;
-  background-color: #d53b47;
+  height: 20vh;
+  background-color: #e84a44;
 `
 
 export const NavBarContainer = styled.div`

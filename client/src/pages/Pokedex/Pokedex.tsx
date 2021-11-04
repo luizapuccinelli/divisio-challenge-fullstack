@@ -3,9 +3,10 @@ import { useQuery } from '@apollo/client'
 import { getPokemons } from '../../gql/getPokemons'
 import { PokemonType } from './types'
 import { Pokemons } from 'components/Pokemons/Pokemons'
-import { PokedexBg, PokedexFooter, PokedexScreen } from './styles'
+import { PokedexBg, PokedexFooter, PokedexScreen, LoadImage } from './styles'
 import { NavBarBg } from 'components/NavBar/styles'
 import { NavBar } from 'components/NavBar/NavBar'
+import pokedex from '../../static/pokedex.png'
 
 export function Pokedex() {
   const [pokemonList, setPokemonList] = useState<PokemonType[]>([])
@@ -23,13 +24,21 @@ export function Pokedex() {
 
   return (
     <>
-      <NavBar />
-      <PokedexBg>
-        <PokedexScreen>
-          <Pokemons pokemons={pokemons} load={loading} />
-        </PokedexScreen>
-      </PokedexBg>
-      <PokedexFooter />
+      {loading ? (
+        <LoadImage image={pokedex}>
+          <h1>Loading ...</h1>
+        </LoadImage>
+      ) : (
+        <>
+          <NavBar />
+          <PokedexBg>
+            <PokedexScreen>
+              <Pokemons pokemons={pokemons} />
+            </PokedexScreen>
+          </PokedexBg>
+          <PokedexFooter />
+        </>
+      )}
     </>
   )
 }

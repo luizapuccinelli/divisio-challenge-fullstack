@@ -15,6 +15,8 @@ function HandleImageSize(size: string) {
 }
 
 export const PokemonContainer = styled.div`
+  margin: 0px;
+  padding: 0px;
   background-color: #ffff;
   width: 80%;
   display: flex;

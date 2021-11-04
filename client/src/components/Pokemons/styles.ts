@@ -2,8 +2,9 @@ import styled from 'styled-components'
 
 export const PokemonList = styled.div`
   display: grid;
+  justify-items: center;
   width: 100%;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
   gap: 50px;
   margin: 100px 200px;
 `
