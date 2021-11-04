@@ -8,19 +8,16 @@ export const PokemonList = styled.div`
   gap: 50px;
   margin: 100px 200px;
 `
-export const LoadImage = styled.div<any>`
-  margin-left: -50px;
+
+export const NoPokemon = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-image: ${(props) => `url(${props.image})`};
-  background-size: 1920px;
-  background-position: center;
-  h1 {
-    margin-left: 60px;
-    font-size: 60px;
-    color: black;
-    margin-top: 600px;
+  p {
+    text-align: center;
+    font-size: 50px;
+    color: #ffff;
   }
 `
