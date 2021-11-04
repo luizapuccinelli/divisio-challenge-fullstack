@@ -1,5 +1,5 @@
 import { Pokemon } from 'components/Pokemon/Pokemon'
-import { LoadImage, PokemonList } from './styles'
+import { PokemonList } from './styles'
 import { PokemonInfoProps } from './types'
 
 export function Pokemons(props: PokemonInfoProps) {
