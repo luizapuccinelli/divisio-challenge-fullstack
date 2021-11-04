@@ -10,13 +10,15 @@ export const NavBarBg = styled.div`
 `
 
 export const NavBarContainer = styled.div`
-  height: 15vh;
+  display: flex;
+  justify-content: center;
+  height: 20vh;
   width: 100%;
-  margin: 0 150px;
 `
 
 export const NavBarContent = styled.div`
-  height: 15vh;
+  width: 80%;
+  height: 20vh;
   display: flex;
   align-items: center;
   justify-content: flex-start;
