@@ -4,7 +4,6 @@ import { getPokemons } from '../../gql/getPokemons'
 import { PokemonType } from './types'
 import { Pokemons } from 'components/Pokemons/Pokemons'
 import { PokedexBg, PokedexFooter, PokedexScreen, LoadImage } from './styles'
-import { NavBarBg } from 'components/NavBar/styles'
 import { NavBar } from 'components/NavBar/NavBar'
 import pokedex from '../../static/pokedex.png'
 
@@ -33,7 +32,7 @@ export function Pokedex() {
           <NavBar />
           <PokedexBg>
             <PokedexScreen>
-              <Pokemons pokemons={pokemons} />
+              <Pokemons pokemons={pokemonList} />
             </PokedexScreen>
           </PokedexBg>
           <PokedexFooter />
