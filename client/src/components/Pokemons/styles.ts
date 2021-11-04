@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 
 export const PokemonList = styled.div`
-  background-color: #red;
   display: grid;
+  width: 100%;
   grid-template-columns: repeat(3, 1fr);
   gap: 50px;
-  margin: 30px 400px;
+  margin: 100px 200px;
 `
 export const LoadImage = styled.div<any>`
   margin-left: -50px;

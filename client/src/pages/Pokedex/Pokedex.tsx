@@ -3,8 +3,11 @@ import { useQuery } from '@apollo/client'
 import { getPokemons } from '../../gql/getPokemons'
 import { PokemonType } from './types'
 import { Pokemons } from 'components/Pokemons/Pokemons'
+import { PokedexBg, PokedexFooter, PokedexScreen } from './styles'
+import { NavBarBg } from 'components/NavBar/styles'
+import { NavBar } from 'components/NavBar/NavBar'
 
-const Pokedex = () => {
+export function Pokedex() {
   const [pokemonList, setPokemonList] = useState<PokemonType[]>([])
   const { data: { pokemons = [] } = {}, loading } = useQuery(getPokemons, {
     variables: {
@@ -18,7 +21,17 @@ const Pokedex = () => {
     }
   }, [loading, pokemons])
 
-  return <Pokemons pokemons={pokemons} load={loading} />
+  return (
+    <>
+      <NavBar />
+      <PokedexBg>
+        <PokedexScreen>
+          <Pokemons pokemons={pokemons} load={loading} />
+        </PokedexScreen>
+      </PokedexBg>
+      <PokedexFooter />
+    </>
+  )
 }
 
 export default Pokedex
