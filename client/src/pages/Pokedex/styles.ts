@@ -9,8 +9,7 @@ export const PokedexBg = styled.div`
 `
 
 export const PokedexScreen = styled.div`
-  width: 100%;
-  margin: 0px 150px;
+  width: 80%;
   display: flex;
   flex-direction: row;
   justify-content: center;
