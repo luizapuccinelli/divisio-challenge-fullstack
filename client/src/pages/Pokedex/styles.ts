@@ -19,9 +19,23 @@ export const PokedexScreen = styled.div`
   box-shadow: inset 0px 0px 36px -2px rgba(0, 0, 0, 0.43);
 `
 export const PokedexFooter = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 10vh;
   background-color: #e84a44;
+  p {
+    color: #ffff;
+    text-align: center;
+  }
+  a {
+    color: #ffff;
+    text-decoration: none;
+    &:hover {
+      color: #313131;
+    }
+  }
 `
 export const LoadImage = styled.div<any>`
   margin-left: -50px;

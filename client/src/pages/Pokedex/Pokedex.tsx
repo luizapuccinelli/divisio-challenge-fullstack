@@ -35,7 +35,18 @@ export function Pokedex() {
               <Pokemons pokemons={pokemonList} />
             </PokedexScreen>
           </PokedexBg>
-          <PokedexFooter />
+          <PokedexFooter>
+            <p>
+              Feito por &nbsp;
+              <a
+                href="https://www.linkedin.com/in/luizakataokaoliveira/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Luiza Kataoka
+              </a>
+            </p>
+          </PokedexFooter>
         </>
       )}
     </>

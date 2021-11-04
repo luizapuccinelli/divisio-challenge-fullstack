@@ -24,6 +24,11 @@ export const PokemonContainer = styled.div`
   align-items: center;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 10px;
+  transition: 0.5s;
+  &:hover {
+    margin-top: -20px;
+    margin-bottom: 20px;
+  }
 `
 export const PokemonContent = styled.div`
   display: flex;
