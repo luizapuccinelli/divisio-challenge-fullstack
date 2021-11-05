@@ -8,7 +8,7 @@ export const HomeBackground = styled.div`
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background-color: #face3d;
+  background-color: #ffd23b;
   div {
     display: flex;
     flex-direction: column;
