@@ -8,7 +8,7 @@ import pokedex from '../../static/pokedex.png'
 export function Pokedex() {
   const { data: { pokemons = [] } = {}, loading } = useQuery(getPokemons, {
     variables: {
-      first: 20
+      first: 151
     }
   })
 

@@ -15,6 +15,24 @@ function HandleTypeBg(type: string) {
     return '#3dc7ef'
   } else if (type === 'Normal') {
     return '#a4acaf'
+  } else if (type === 'Electric') {
+    return '#eed535'
+  } else if (type === 'Ground') {
+    return '#ab9842'
+  } else if (type === 'Fairy') {
+    return '#fdb9e9'
+  } else if (type === 'Fighting') {
+    return '#d56723'
+  } else if (type === 'Psychic') {
+    return '#f366b9'
+  } else if (type === 'Steel') {
+    return '#9eb7b8'
+  } else if (type === 'Ice') {
+    return '#51c4e7'
+  } else if (type === 'Rock') {
+    return '#a38c21'
+  } else if (type === 'Dragon') {
+    return '#f16e57'
   }
 }
 
@@ -23,7 +41,11 @@ function HandleTypeText(type: string) {
     type === 'Fire' ||
     type === 'Poison' ||
     type === 'Bug' ||
-    type === 'Water'
+    type === 'Water' ||
+    type === 'Fighting' ||
+    type === 'Psychic' ||
+    type === 'Rock' ||
+    type === 'Dragon'
   ) {
     return '#ffff'
   }
