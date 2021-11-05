@@ -9,7 +9,7 @@ export function Pokedex() {
   const { data: { pokemons = [] } = {}, loading } = useQuery(getPokemons, {
     variables: {
       first: 151
-    }
+    } 
   })
 
   return (
