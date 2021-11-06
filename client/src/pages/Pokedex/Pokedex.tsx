@@ -1,8 +1,8 @@
 import { useQuery } from '@apollo/client'
 import { getPokemons } from '../../gql/getPokemons'
-import { Pokemons } from 'components/Pokemons/Pokemons'
+import { Pokemons } from 'components/Pokemons'
 import { PokedexBg, PokedexFooter, PokedexScreen, LoadImage } from './styles'
-import { NavBar } from 'components/NavBar/NavBar'
+import { NavBar } from 'components/NavBar'
 import pokedex from '../../static/pokedex.png'
 
 export function Pokedex() {

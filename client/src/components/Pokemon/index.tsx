@@ -1,5 +1,5 @@
 import React from 'react'
-import { Type } from '../PokemonTypes/Type'
+import { Type } from 'components/PokemonTypes'
 import {
   PokemonContainer,
   PokemonContent,
@@ -8,18 +8,18 @@ import {
 } from './styles'
 import { PokemonProps } from './types'
 
-export function Pokemon(props: PokemonProps) {
+export function Pokemon({ pokemon }: PokemonProps) {
   return (
     <PokemonContainer>
       <PokemonContent>
-        <h1>{props.pokemon.name}</h1>
-        <p>Nº {props.pokemon.number}</p>
+        <h1>{pokemon.name}</h1>
+        <p>Nº {pokemon.number}</p>
         <PokemonType>
-          {props.pokemon.types.map((type) => {
+          {pokemon.types.map((type) => {
             return <Type key={type} type={type} />
           })}
         </PokemonType>
-        <PokemonImage image={props.pokemon.image} />
+        <PokemonImage image={pokemon.image} />
       </PokemonContent>
     </PokemonContainer>
   )

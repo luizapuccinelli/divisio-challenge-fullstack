@@ -1,13 +1,13 @@
-import { Pokemon } from 'components/Pokemon/Pokemon'
+import { Pokemon } from 'components/Pokemon'
 import { NoPokemon, PokemonList } from './styles'
 import { PokemonInfoProps } from './types'
 
-export function Pokemons(props: PokemonInfoProps) {
+export function Pokemons({ pokemons }: PokemonInfoProps) {
   return (
     <>
-      {props.pokemons.length > 1 ? (
+      {pokemons.length ? (
         <PokemonList>
-          {props.pokemons.map((pokemon) => {
+          {pokemons.map((pokemon) => {
             return <Pokemon key={pokemon.id} pokemon={pokemon} />
           })}
         </PokemonList>
