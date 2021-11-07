@@ -21,3 +21,12 @@ export const NoPokemon = styled.div`
     color: #ffff;
   }
 `
+
+export const PokemonButton = styled.button`
+  width: 100%;
+  background-color: transparent;
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  border: none;
+`

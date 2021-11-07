@@ -19,26 +19,28 @@ export function Pokedex() {
           <h1>Loading ...</h1>
         </LoadImage>
       )}
-      <>
-        <NavBar />
-        <PokedexBg>
-          <PokedexScreen>
-            <Pokemons pokemons={pokemons} />
-          </PokedexScreen>
-        </PokedexBg>
-        <PokedexFooter>
-          <p>
-            Feito por &nbsp;
-            <a
-              href="https://www.linkedin.com/in/luizakataokaoliveira/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Luiza Kataoka
-            </a>
-          </p>
-        </PokedexFooter>
-      </>
+      {!loading && (
+        <>
+          <NavBar />
+          <PokedexBg>
+            <PokedexScreen>
+              <Pokemons pokemons={pokemons} />
+            </PokedexScreen>
+          </PokedexBg>
+          <PokedexFooter>
+            <p>
+              Feito por &nbsp;
+              <a
+                href="https://www.linkedin.com/in/luizakataokaoliveira/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Luiza Kataoka
+              </a>
+            </p>
+          </PokedexFooter>
+        </>
+      )}
     </>
   )
 }

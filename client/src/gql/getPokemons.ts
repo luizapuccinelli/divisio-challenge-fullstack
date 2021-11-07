@@ -9,6 +9,9 @@ export const getPokemons = gql`
       types
       image
       maxHP
+      maxCP
+      weaknesses
+      resistant
     }
   }
 `

@@ -14,11 +14,13 @@ function HandleImageSize(size: string) {
   }
 }
 
-export const PokemonContainer = styled.div`
+export const PokemonContainer = styled.button`
+  text-decoration: none;
+  border: none;
   margin: 0px;
   padding: 0px;
   background-color: #ffff;
-  width: 80%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
