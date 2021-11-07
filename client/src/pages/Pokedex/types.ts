@@ -8,4 +8,5 @@ export interface PokemonType {
     types: string[]
     weaknesses: string[]
     resistant: string []
+    classification: string
 }

@@ -12,6 +12,7 @@ export const getPokemons = gql`
       maxCP
       weaknesses
       resistant
+      classification
     }
   }
 `

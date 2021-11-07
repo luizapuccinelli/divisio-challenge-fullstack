@@ -1,41 +1,63 @@
 import { useState } from 'react'
-import { ModalContainer, ModalMain } from './styles'
 import { ModalProps } from './types'
 import { PokemonType } from 'pages/Pokedex/types'
 import { PokemonImage } from 'components/Pokemon/styles'
 import { Type } from 'components/PokemonTypes'
+import { AiFillCloseCircle } from 'react-icons/ai'
+import {
+  ModalBg,
+  ModalContent,
+  PokemonInfo,
+  PokemonStrg,
+  PokemonWeak,
+  PokemonWeakStrg
+} from './styles'
 
 const Modal: React.FC<ModalProps> = ({ name, setName, pokemons }) => {
-  const pokemonList = [...pokemons]
-  const [selectedPokemon, setSelectedPokemon] = useState<PokemonType[]>([])
+  const pokemonList = pokemons
+  const [selectedPokemon] = useState<PokemonType[]>([])
   pokemonList.map((pokemon) => {
     if (name === pokemon.name) {
       selectedPokemon.push(pokemon)
     }
   })
-  console.log(selectedPokemon)
 
   return (
-    <ModalContainer>
-      <ModalMain>
-        <span onClick={() => setName('')}>x</span>
+    <ModalBg>
+      <ModalContent>
+        <button onClick={() => setName('')}>
+          <AiFillCloseCircle />
+        </button>
         {selectedPokemon.map((selected) => {
           return (
-            <div key={selected.id}>
+            <PokemonInfo key={selected.id}>
               <h1>{selected.name}</h1>
               <PokemonImage image={selected.image} />
-              <p>max HP: {selected.maxHP}</p>
-              <p>max CP: {selected.maxCP}</p>
-              <p>weaknesses: {selected.weaknesses}</p>
-              <p>resistant: {selected.resistant}</p>
+              <p>{selected.classification}</p>
               {selected.types.map((type) => {
                 return <Type key={type} type={type} />
               })}
-            </div>
+              <p>max HP: {selected.maxHP}</p>
+              <p>max CP: {selected.maxCP}</p>
+              <PokemonWeakStrg>
+                <PokemonWeak>
+                  <p>Weaknesses:</p>
+                  {selected.weaknesses.map((type) => {
+                    return <Type key={type} type={type} />
+                  })}
+                </PokemonWeak>
+                <PokemonStrg>
+                  <p>Resistant:</p>
+                  {selected.resistant.map((type) => {
+                    return <Type key={type} type={type} />
+                  })}
+                </PokemonStrg>
+              </PokemonWeakStrg>
+            </PokemonInfo>
           )
         })}
-      </ModalMain>
-    </ModalContainer>
+      </ModalContent>
+    </ModalBg>
   )
 }
 
