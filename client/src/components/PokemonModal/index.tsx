@@ -13,7 +13,7 @@ import {
   PokemonWeakStrg
 } from './styles'
 
-const Modal: React.FC<ModalProps> = ({ name, setName, pokemons }) => {
+export function PokemonModal({ name, setName, pokemons }: ModalProps) {
   const pokemonList = pokemons
   const [selectedPokemon] = useState<PokemonType[]>([])
   pokemonList.map((pokemon) => {
@@ -60,5 +60,3 @@ const Modal: React.FC<ModalProps> = ({ name, setName, pokemons }) => {
     </ModalBg>
   )
 }
-
-export default Modal

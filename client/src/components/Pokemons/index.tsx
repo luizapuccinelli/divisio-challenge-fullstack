@@ -1,8 +1,8 @@
 import { Pokemon } from 'components/Pokemon'
+import { PokemonModal } from 'components/PokemonModal'
 import React, { useState } from 'react'
 import { NoPokemon, PokemonList, PokemonButton } from './styles'
 import { PokemonInfoProps } from './types'
-import PokemonModal from '../PokemonModal'
 
 export function Pokemons({ pokemons }: PokemonInfoProps) {
   const [name, setName] = useState('')
